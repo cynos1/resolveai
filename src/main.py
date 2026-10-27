@@ -2,6 +2,9 @@ from fastapi import FastAPI, HTTPException
 from src.semantic_investigation_api import (
     router as semantic_investigation_router,
 )
+from src.grounded_answer_api import (
+    router as grounded_answer_router,
+)
 from pathlib import Path
 from fastapi import Query
 from pydantic import BaseModel
@@ -19,6 +22,7 @@ app = FastAPI(
     description="AI-assisted airline customer support investigation system",
     version="0.1.0"
 )
+app.include_router(grounded_answer_router)
 app.include_router(semantic_investigation_router)
 def get_database_path():
     return DATABASE_PATH
