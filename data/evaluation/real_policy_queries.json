@@ -1,0 +1,34 @@
+[
+  {
+    "query": "How quickly must I report delayed luggage?",
+    "relevant_headings": ["1. Reporting Delayed Baggage"]
+  },
+  {
+    "query": "Can I get reimbursed for essential purchases?",
+    "relevant_headings": ["2. Essential Purchases"]
+  },
+  {
+    "query": "Do I need receipts for toiletries?",
+    "relevant_headings": ["3. Compensation Requirements"]
+  },
+  {
+    "query": "Who has to approve my compensation?",
+    "relevant_headings": ["4. Approval"]
+  },
+  {
+    "query": "Can the airline tell me exactly where my suitcase is right now?",
+    "relevant_headings": ["5. Baggage Tracking"]
+  },
+  {
+    "query": "What is the maximum amount I can claim?",
+    "relevant_headings": ["2. Essential Purchases"]
+  },
+  {
+    "query": "What happens if I report my missing luggage after 24 hours?",
+    "relevant_headings": ["1. Reporting Delayed Baggage"]
+  },
+  {
+    "query": "Will my reimbursement be approved automatically?",
+    "relevant_headings": ["4. Approval"]
+  }
+]

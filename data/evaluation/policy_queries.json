@@ -1,0 +1,22 @@
+[
+  {
+    "query": "When must delayed baggage be reported?",
+    "relevant_headings": ["Reporting"]
+  },
+  {
+    "query": "Do I need receipts for reimbursement?",
+    "relevant_headings": ["Reimbursement"]
+  },
+  {
+    "query": "Who approves reimbursement requests?",
+    "relevant_headings": ["Human Approval"]
+  },
+  {
+    "query": "Can I see the real-time location of my bag?",
+    "relevant_headings": ["Baggage Tracking"]
+  },
+  {
+    "query": "Can I get money back for toiletries?",
+    "relevant_headings": ["Reimbursement"]
+  }
+]

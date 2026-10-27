@@ -1,0 +1,109 @@
+{
+  "total_queries": 8,
+  "top_k": 3,
+  "hit_rate": 0.875,
+  "mrr": 0.6666666666666667,
+  "results": [
+    {
+      "query": "How quickly must I report delayed luggage?",
+      "relevant_headings": [
+        "1. Reporting Delayed Baggage"
+      ],
+      "retrieved_headings": [
+        "1. Reporting Delayed Baggage",
+        "2. Essential Purchases",
+        "3. Compensation Requirements"
+      ],
+      "hit": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "Can I get reimbursed for essential purchases?",
+      "relevant_headings": [
+        "2. Essential Purchases"
+      ],
+      "retrieved_headings": [
+        "2. Essential Purchases",
+        "3. Compensation Requirements"
+      ],
+      "hit": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "Do I need receipts for toiletries?",
+      "relevant_headings": [
+        "3. Compensation Requirements"
+      ],
+      "retrieved_headings": [
+        "2. Essential Purchases",
+        "3. Compensation Requirements"
+      ],
+      "hit": 1,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "query": "Who has to approve my compensation?",
+      "relevant_headings": [
+        "4. Approval"
+      ],
+      "retrieved_headings": [
+        "1. Reporting Delayed Baggage",
+        "3. Compensation Requirements",
+        "4. Approval"
+      ],
+      "hit": 1,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "query": "Can the airline tell me exactly where my suitcase is right now?",
+      "relevant_headings": [
+        "5. Baggage Tracking"
+      ],
+      "retrieved_headings": [
+        "2. Essential Purchases",
+        "1. Reporting Delayed Baggage",
+        "3. Compensation Requirements"
+      ],
+      "hit": 0,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "query": "What is the maximum amount I can claim?",
+      "relevant_headings": [
+        "2. Essential Purchases"
+      ],
+      "retrieved_headings": [
+        "2. Essential Purchases",
+        "1. Reporting Delayed Baggage",
+        "3. Compensation Requirements"
+      ],
+      "hit": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What happens if I report my missing luggage after 24 hours?",
+      "relevant_headings": [
+        "1. Reporting Delayed Baggage"
+      ],
+      "retrieved_headings": [
+        "1. Reporting Delayed Baggage",
+        "3. Compensation Requirements"
+      ],
+      "hit": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "Will my reimbursement be approved automatically?",
+      "relevant_headings": [
+        "4. Approval"
+      ],
+      "retrieved_headings": [
+        "2. Essential Purchases",
+        "4. Approval",
+        "5. Baggage Tracking"
+      ],
+      "hit": 1,
+      "reciprocal_rank": 0.5
+    }
+  ]
+}
