@@ -1,0 +1,223 @@
+{
+  "embedding_model": "qwen3-embedding:4b",
+  "top_k": 3,
+  "keyword": {
+    "total_queries": 8,
+    "top_k": 3,
+    "hit_rate": 0.875,
+    "mrr": 0.6666666666666667,
+    "results": [
+      {
+        "query": "How quickly must I report delayed luggage?",
+        "relevant_headings": [
+          "1. Reporting Delayed Baggage"
+        ],
+        "retrieved_headings": [
+          "1. Reporting Delayed Baggage",
+          "2. Essential Purchases",
+          "3. Compensation Requirements"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "Can I get reimbursed for essential purchases?",
+        "relevant_headings": [
+          "2. Essential Purchases"
+        ],
+        "retrieved_headings": [
+          "2. Essential Purchases",
+          "3. Compensation Requirements"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "Do I need receipts for toiletries?",
+        "relevant_headings": [
+          "3. Compensation Requirements"
+        ],
+        "retrieved_headings": [
+          "2. Essential Purchases",
+          "3. Compensation Requirements"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "query": "Who has to approve my compensation?",
+        "relevant_headings": [
+          "4. Approval"
+        ],
+        "retrieved_headings": [
+          "1. Reporting Delayed Baggage",
+          "3. Compensation Requirements",
+          "4. Approval"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      {
+        "query": "Can the airline tell me exactly where my suitcase is right now?",
+        "relevant_headings": [
+          "5. Baggage Tracking"
+        ],
+        "retrieved_headings": [
+          "2. Essential Purchases",
+          "1. Reporting Delayed Baggage",
+          "3. Compensation Requirements"
+        ],
+        "hit": 0,
+        "reciprocal_rank": 0.0
+      },
+      {
+        "query": "What is the maximum amount I can claim?",
+        "relevant_headings": [
+          "2. Essential Purchases"
+        ],
+        "retrieved_headings": [
+          "2. Essential Purchases",
+          "1. Reporting Delayed Baggage",
+          "3. Compensation Requirements"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "What happens if I report my missing luggage after 24 hours?",
+        "relevant_headings": [
+          "1. Reporting Delayed Baggage"
+        ],
+        "retrieved_headings": [
+          "1. Reporting Delayed Baggage",
+          "3. Compensation Requirements"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "Will my reimbursement be approved automatically?",
+        "relevant_headings": [
+          "4. Approval"
+        ],
+        "retrieved_headings": [
+          "2. Essential Purchases",
+          "4. Approval",
+          "5. Baggage Tracking"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 0.5
+      }
+    ]
+  },
+  "semantic": {
+    "hit_rate": 1.0,
+    "mrr": 0.9375,
+    "results": [
+      {
+        "query": "How quickly must I report delayed luggage?",
+        "expected": [
+          "1. Reporting Delayed Baggage"
+        ],
+        "retrieved": [
+          "1. Reporting Delayed Baggage",
+          "3. Compensation Requirements",
+          "Northstar Air \u2014 Delayed Baggage Policy"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "Can I get reimbursed for essential purchases?",
+        "expected": [
+          "2. Essential Purchases"
+        ],
+        "retrieved": [
+          "2. Essential Purchases",
+          "3. Compensation Requirements",
+          "4. Approval"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "Do I need receipts for toiletries?",
+        "expected": [
+          "3. Compensation Requirements"
+        ],
+        "retrieved": [
+          "3. Compensation Requirements",
+          "2. Essential Purchases",
+          "1. Reporting Delayed Baggage"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "Who has to approve my compensation?",
+        "expected": [
+          "4. Approval"
+        ],
+        "retrieved": [
+          "4. Approval",
+          "3. Compensation Requirements",
+          "2. Essential Purchases"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "Can the airline tell me exactly where my suitcase is right now?",
+        "expected": [
+          "5. Baggage Tracking"
+        ],
+        "retrieved": [
+          "1. Reporting Delayed Baggage",
+          "5. Baggage Tracking",
+          "Northstar Air \u2014 Delayed Baggage Policy"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "query": "What is the maximum amount I can claim?",
+        "expected": [
+          "2. Essential Purchases"
+        ],
+        "retrieved": [
+          "2. Essential Purchases",
+          "3. Compensation Requirements",
+          "4. Approval"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "What happens if I report my missing luggage after 24 hours?",
+        "expected": [
+          "1. Reporting Delayed Baggage"
+        ],
+        "retrieved": [
+          "1. Reporting Delayed Baggage",
+          "Northstar Air \u2014 Delayed Baggage Policy",
+          "3. Compensation Requirements"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": "Will my reimbursement be approved automatically?",
+        "expected": [
+          "4. Approval"
+        ],
+        "retrieved": [
+          "4. Approval",
+          "2. Essential Purchases",
+          "3. Compensation Requirements"
+        ],
+        "hit": 1,
+        "reciprocal_rank": 1.0
+      }
+    ]
+  }
+}
