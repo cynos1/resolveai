@@ -115,7 +115,7 @@ Swagger UI is at `http://127.0.0.1:8000/docs`.
 
 The local `.db` file and generated embedding index are intentionally excluded from version control. Do **not** commit real passenger records, personally identifying data, or locally generated evidence reports.
 
-**Current reproducibility blocker:** The original working versions of `src/policy_retrieval.py`, `src/investigation_service.py`, and `src/retrieval_evaluation.py`, plus `data/sample_records/bookings.csv` and `data/sample_records/baggage.csv`, have not yet been pushed from the development Mac to GitHub. The bootstrap helper and its tests are committed, but a fresh clone will not run until those original files (with synthetic demo data) are added and a clean-clone test succeeds.
+**Reproducibility status:** The retrieval modules and synthetic demo CSV fixtures are now tracked in GitHub, alongside the database bootstrap script. The development Mac reports 74 passing tests. A clean-clone installation and end-to-end run on a fresh environment remain to be verified; success on the development machine alone does not establish portability.
 
 ## Testing and evaluation
 
