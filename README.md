@@ -84,10 +84,10 @@ Interactive API documentation is available at `http://127.0.0.1:8000/docs` while
 ### Prerequisites
 
 - Python 3.10 and a virtual environment
-- Ollama running locally on `http://localhost:11434`
-- Installed local embedding and generation models
-- A populated SQLite database at `data/database/northstar.db`
-- The configured Northstar Air policy document and policy retrieval source module
+- Ollama running on `http://localhost:11434`
+- Local models `qwen3-embedding:4b` and `qwen3.5:35b-mlx` (or appropriately configured equivalents)
+- Synthetic demo CSV fixtures in `data/sample_records/`
+- Northstar Air's fictional policy in `data/policies/delayed_baggage_policy.md`
 
 ```bash
 git clone https://github.com/cynos1/resolveai.git
@@ -97,12 +97,25 @@ python3.10 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 
+# Creates the local SQLite database only if it does not already exist.
+python -m src.bootstrap_demo
+
+# Ollama must be running, with both models available.
 ollama list
+
 python -m pytest tests/ -v
 python -m uvicorn src.main:app --reload
 ```
 
-**Reproducibility note:** The repository is still being prepared for a clean, from-scratch setup. The local SQLite `.db` file is excluded from version control. At the time of this README, `src/policy_retrieval.py` is referenced by the application but is not present on the GitHub default branch. Database initialization, sample fixtures, and the missing source file must be added before a fresh clone will run end to end. The commands above describe the intended local workflow, not a verified one-command installation.
+Swagger UI is at `http://127.0.0.1:8000/docs`.
+
+### Database setup and safety
+
+`python -m src.bootstrap_demo` reads **fictional** `bookings.csv` and `baggage.csv`, validates booking references, and initializes `data/database/northstar.db`. If the database already exists, the script **does not modify it**.
+
+The local `.db` file and generated embedding index are intentionally excluded from version control. Do **not** commit real passenger records, personally identifying data, or locally generated evidence reports.
+
+**Current reproducibility blocker:** The original working versions of `src/policy_retrieval.py`, `src/investigation_service.py`, and `src/retrieval_evaluation.py`, plus `data/sample_records/bookings.csv` and `data/sample_records/baggage.csv`, have not yet been pushed from the development Mac to GitHub. The bootstrap helper and its tests are committed, but a fresh clone will not run until those original files (with synthetic demo data) are added and a clean-clone test succeeds.
 
 ## Testing and evaluation
 
