@@ -1,0 +1,6 @@
+bag_tag,booking_reference,baggage_status,last_known_airport,report_id,report_date
+BG1001,XYZ789,delayed,ORD,RPT001,2026-10-12
+BG1002,XYZ789,delivered,ORD,,
+BG1003,ABC123,not_checked_in,,,
+BG1004,DEF456,delayed,LAX,RPT002,2026-10-14
+
