@@ -13,7 +13,7 @@
     "id": "POLICY_TRACKING",
     "category": "policy_grounding",
     "booking_reference": "XYZ789",
-    "question": "According to the policy, how can I check my delayed baggage's location or delivery status?",
+    "question": "According to Northstar Air's policy, which records must be used to confirm a bag's current location or delivery status?",
     "expected_http_status": 200,
     "expected_abstention": false,
     "require_policy_citation": true,
