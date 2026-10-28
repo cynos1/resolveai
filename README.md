@@ -125,6 +125,8 @@ python -m pytest tests/ -v
 
 Previous local experiments compared keyword, semantic, and hybrid retrieval using Hit@K and mean reciprocal rank (MRR). Semantic retrieval was selected as the primary approach for the investigation endpoint; hybrid retrieval remains available for comparison.
 
+The first seven-case local grounded-answer evaluation achieved **6/7 deterministic checks (85.7%)** and exposed a mismatch between expressed uncertainty and the response's abstention status, as well as an unsupported definitive claim about compensation approval. These are diagnostic results, **not a factual accuracy rate**. See the [Milestone 12 baseline report](docs/evaluation/milestone_12_baseline.md) for the method, case results, and limitations.
+
 The evaluation program is expanding to cover:
 
 - Factual claims supported by booking or policy evidence
