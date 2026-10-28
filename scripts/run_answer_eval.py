@@ -48,13 +48,26 @@ def call_api(base_url, case, timeout=360):
             return exc.code, {"detail": body}
 
 
-def run_evaluation(base_url, limit=None):
+def select_cases(cases, case_ids=None, limit=None):
+    """Select named cases or a prefix, without changing dataset order."""
+    if case_ids:
+        requested = set(case_ids)
+        available = {case["id"] for case in cases}
+        unknown = sorted(requested - available)
+        if unknown:
+            raise ValueError("Unknown evaluation case(s): " + ", ".join(unknown))
+        cases = [case for case in cases if case["id"] in requested]
+    if limit is not None:
+        cases = cases[:limit]
+    return cases
+
+
+def run_evaluation(base_url, limit=None, case_ids=None):
     """Execute cases sequentially and write complete results locally."""
     cases = json.loads(DATASET_PATH.read_text(encoding="utf-8"))
     if not isinstance(cases, list):
         raise ValueError("Expected an evaluation JSON array")
-    if limit is not None:
-        cases = cases[:limit]
+    cases = select_cases(cases, case_ids=case_ids, limit=limit)
 
     results = []
 
@@ -123,10 +136,23 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default="http://127.0.0.1:8000")
     parser.add_argument("--limit", type=int)
+    parser.add_argument(
+        "--case",
+        dest="case_ids",
+        action="append",
+        help="Run only this case ID; repeat --case for multiple cases.",
+    )
     args = parser.parse_args()
 
     if args.limit is not None and args.limit < 1:
         parser.error("--limit must be at least 1")
 
-    summary = run_evaluation(args.base_url, args.limit)
+    try:
+        summary = run_evaluation(
+            args.base_url,
+            limit=args.limit,
+            case_ids=args.case_ids,
+        )
+    except ValueError as exc:
+        parser.error(str(exc))
     sys.exit(0 if summary["pass_rate"] == 1.0 else 1)
